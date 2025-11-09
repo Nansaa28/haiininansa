@@ -1,48 +1,56 @@
-<?php
-include 'config.php';
-$result = $conn->query("SELECT * FROM mahasiswa");
-?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Cake</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    padding: 50px;
+    text-align: center;
+  }
+  h1 {
+    color: #d63384;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+  }
+  a {
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #1c5980;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h2>Data Mahasiswa</h2>
-        <a href="create.php" class="btn">Tambah Mahasiswa</a>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nama</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Tanggal Lahir</th>
-                    <th>No HP</th>
-                    <th>Alamat</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($row = $result->fetch_assoc()) { ?>
-                <tr>
-                    <td><?= htmlspecialchars($row['id_mhs']) ?></td>
-                    <td><?= htmlspecialchars($row['nama_mhs']) ?></td>
-                    <td><?= htmlspecialchars($row['jk_mhs']) ?></td>
-                    <td><?= htmlspecialchars($row['tgl_lhr_mhs']) ?></td>
-                    <td><?= htmlspecialchars($row['no_hp_mhs']) ?></td>
-                    <td><?= htmlspecialchars($row['alamat_mhs']) ?></td>
-                    <td class="aksi">
-                        <a href="edit.php?id=<?= $row['id_mhs'] ?>" class="edit">Edit</a>
-                        <a href="delete.php?id=<?= $row['id_mhs'] ?>" class="hapus" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
-                    </td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-    </div>
+
+<h1>Selamat Datang di Website Cake 🎂</h1>
+<p>Klik link di bawah untuk membuka file HTML:</p>
+
+<ul>
+  <li><a href="coba.html">Coba</a></li>
+  <li><a href="contoh1.html">Contoh 1</a></li>
+  <li><a href="contoh2.html">Contoh 2</a></li>
+  <li><a href="contoh3.html">Contoh 3</a></li>
+  <li><a href="contoh4.html">Contoh 4</a></li>
+  <li><a href="contoh5.html">Contoh 5</a></li>
+  <li><a href="contoh6.html">Contoh 6</a></li>
+  <li><a href="haiininansa.html">Haiin Inansa</a></li>
+  <li><a href="hehe.html">Hehe</a></li>
+  <li><a href="star.html">Star</a></li>
+</ul>
+
+<p>✨ Website ini dibuat langsung di GitHub Pages!</p>
+
 </body>
 </html>
